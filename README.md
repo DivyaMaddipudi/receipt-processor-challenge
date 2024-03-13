@@ -7,13 +7,12 @@ This web service is entirely developed using Golang, utilizing the Gin web frame
 1. Install Golang in your system (I installed latest version 1.22.1)
 2. Clone the repository using `git clone https://github.com/DivyaMaddipudi/receipt-processor-challenge.git`
 3. Now, go to the root directory `cd receipt-processor-challenge` and run using `go run .` command
-4. This will start the server locally on the port 8000
-
-### Note: If you get any issues io timeout issues when downloading modules, set `export GOPROXY=direct`
+   - #### Note: If you encounter any io timeout issues when downloading modules, try to resolve those errors by setting `export GOPROXY=direct`
+5. This will start the server locally on the port 8000
 
 ## Routes
 
-1. GET `/receipts`
+1. GET `/receipts`: Get all the receipts data available
 2. POST `/receipts/process` : This takes JSON receipt and returns JSON object with an unique ID.
 3. GET `/receipts/:id/points `: This takes receipt Id and returns the JSON object with calculated points. If the points are calculated for specific receipt, It returns the pre-computed value instead of calculating again
 
